@@ -133,4 +133,4 @@ def search():
     return jsonify({'results': optimized_results})
 
 if __name__ == '__main__':
-    app.run(debug=True, host='127.0.0.1', port=5013)
+    app.run(debug=False)
