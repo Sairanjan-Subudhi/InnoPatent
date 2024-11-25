@@ -1,0 +1,14 @@
+{
+  "builds": [
+    {
+      "src": "Driverless.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "Driverless.py"
+    }
+  ]
+}

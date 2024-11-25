@@ -37,7 +37,7 @@ def gwo_optimize_results(results, target_query):
 # Setup Chrome WebDriver using webdriver-manager
 def get_chrome_driver():
     chrome_options = Options()
-    #chrome_options.add_argument('--headless')  # Headless mode
+    chrome_options.add_argument('--headless')  # Headless mode
     chrome_options.add_argument('--no-sandbox')
 
     # Automatically fetch and setup the right ChromeDriver version
@@ -117,7 +117,7 @@ def scrape_espacenet(query):
 
 @app.route('/')
 def home():
-    return render_template('index2end.html')
+    return render_template('index.html')
 
 @app.route('/search', methods=['GET'])
 def search():

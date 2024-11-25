@@ -32,8 +32,8 @@ def gwo_optimize_results(results, target_query):
 # Scrape Google Patents data
 def scrape_google_patents(query):
     chrome_options = Options()
-    #chrome_options.add_argument('--headless')
-    driver = webdriver.Chrome(service=Service(r'chromedriver.exe'), options=chrome_options)
+    chrome_options.add_argument('--headless')
+    driver = webdriver.Chrome(service=Service(r'chromedriver'), options=chrome_options)
     results = []
     try:
         for page in range(1, 2):  # Adjust page range as needed
@@ -73,8 +73,8 @@ def scrape_google_patents(query):
 # Scrape Espacenet data and map to Google Patents
 def scrape_espacenet(query):
     chrome_options = Options()
-    #chrome_options.add_argument('--headless')
-    driver = webdriver.Chrome(service=Service(r'chromedriver.exe'), options=chrome_options)
+    chrome_options.add_argument('--headless')
+    driver = webdriver.Chrome(service=Service(r'chromedriver'), options=chrome_options)
     results = []
     try:
         for page in range(1, 2):  # Adjust page range as needed
@@ -111,7 +111,7 @@ def scrape_espacenet(query):
 
 @app.route('/')
 def home():
-    return render_template('index2end.html')
+    return render_template('index.html')
 
 @app.route('/search', methods=['GET'])
 def search():
